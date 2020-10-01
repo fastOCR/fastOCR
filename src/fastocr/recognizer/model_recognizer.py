@@ -13,7 +13,6 @@ class RecognizerModel(nn.Module):
         self.stages = {'Trans': self.config.transformation, 'Feat': self.config.feature_extraction,
                        'Seq': self.config.sequence_modeling, 'Pred': self.config.prediction}
 
-
         """ Transformation """
         if self.config.transformation == 'TPS':
             self.Transformation = TPS_SpatialTransformerNetwork(

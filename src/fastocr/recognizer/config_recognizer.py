@@ -1,5 +1,5 @@
 class RecognizerConfig():
-    """""
+    """
     Configuration class for the recognizer class. Used to instanciate recognizer models according to the specific arguments.
 
     Args :
@@ -39,7 +39,7 @@ class RecognizerConfig():
             Input batch size
         charcaters (:obj:`str`, `optional`, defaults to '0123456789abcdefghijklmnopqrstuvwxyz')
             Characters to recognize
-    """""
+    """
     def __init__(
             self,
             transformation="TPS",

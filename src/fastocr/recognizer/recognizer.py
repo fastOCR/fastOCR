@@ -2,10 +2,11 @@ import torch
 import cv2
 import numpy as np
 import torch.nn.functional as F
-from .utils import CTCLabelConverter, AttnLabelConverter
+from .encoding_utils import CTCLabelConverter, AttnLabelConverter
 from .model_recognizer import RecognizerModel
+from .pretrained_utils import PreTrainedModel
 
-class Recognizer():
+class Recognizer(PreTrainedModel):
     def __init__(self, config, weights_path):
         self.config = config
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
